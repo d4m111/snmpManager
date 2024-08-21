@@ -1,6 +1,6 @@
 <?php
 
-namespace Telecentro\SnmpManager\App\Console\Commands;
+namespace D4m111\SnmpManager\App\Console\Commands;
 
 use Illuminate\Console\Command;
 

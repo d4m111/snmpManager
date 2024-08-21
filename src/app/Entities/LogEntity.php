@@ -1,6 +1,6 @@
 <?php
 
-namespace Telecentro\SnmpManager\App\Entities;
+namespace D4m111\SnmpManager\App\Entities;
 
 use Illuminate\Support\Facades\Log;
 
@@ -117,7 +117,7 @@ class LogEntity {
             $message[] = "$k=$v";
         }
 
-        $resp = implode(' ',$message);
+        $resp = implode(', ',$message);
         
         return $resp;
     }

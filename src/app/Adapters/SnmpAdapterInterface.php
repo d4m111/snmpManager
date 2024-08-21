@@ -1,6 +1,6 @@
 <?php
 
-namespace Telecentro\SnmpManager\App\Adapters;
+namespace D4m111\SnmpManager\App\Adapters;
 
 interface SnmpAdapterInterface
 {

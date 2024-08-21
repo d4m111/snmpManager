@@ -1,6 +1,6 @@
 <?php
 
-namespace Telecentro\SnmpManager\App\Entities;
+namespace D4m111\SnmpManager\App\Entities;
 
 use \Exception;
 

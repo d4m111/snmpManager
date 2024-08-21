@@ -1,6 +1,6 @@
 <?php
 
-namespace Telecentro\SnmpManager\App\Services;
+namespace D4m111\SnmpManager\App\Services;
 
 use Telecentro\SnmpManager\App\Adapters\SnmpAdapter;
 use Telecentro\SnmpManager\App\Entities\SnmpEntity;

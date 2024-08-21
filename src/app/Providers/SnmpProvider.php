@@ -1,6 +1,6 @@
 <?php
 
-namespace Telecentro\SnmpManager\App\Providers;
+namespace D4m111\SnmpManager\App\Providers;
 
 use Telecentro\SnmpManager\App\Console\Commands;
 
