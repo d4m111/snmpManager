@@ -5,7 +5,7 @@
 &nbsp;
 ## :no_entry: Requisitos:
 
-- PHP 8.0 (o superior)
+- PHP 8.1 (o superior)
 - Laravel 9 (o superior)
 
 &nbsp;
