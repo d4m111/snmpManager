@@ -33,7 +33,7 @@
         'providers' => ServiceProvider::defaultProviders()->merge([
             ...
             
-            d4m111\SnmpManager\App\Providers\SnmpProvider::class,
+            D4m111\SnmpManager\App\Providers\SnmpProvider::class,
 
         ])->toArray(),
 
@@ -125,7 +125,7 @@
 
         <?php
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $snmp->config(
             comunity:'private',             // comunidad SNMP (Opcional - default = public)
@@ -156,7 +156,7 @@
 
         'single' => [
             'driver' => 'single',
-            'tap' => [d4m111\SnmpManager\App\Utils\JsonFormatter::class],
+            'tap' => [D4m111\SnmpManager\App\Utils\JsonFormatter::class],
             ...
 
     storage/logs/laravel.log
@@ -170,7 +170,7 @@
 
         <?php
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $r = $snmp->get(
             ip: '10.16.208.47',             // IP del dispositivo (Requerido)
@@ -209,7 +209,7 @@
 
     &nbsp;
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $r = $snmp->getByRef(
             ip: '10.16.208.47',             // IP del dispositivo (Requerido)
@@ -242,7 +242,7 @@
 
         <?php
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $r = $snmp->get(                    // Siempre retorna un array
             ip: '10.16.208.47',             // IP del dispositivo (Requerido)
@@ -277,7 +277,7 @@
 
         <?php
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $r = $snmp->getByRef(               // Siempre retorna un array
             ip: '10.16.208.47',             // IP del dispositivo (Requerido)
@@ -318,7 +318,7 @@
 
         <?php
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $r = $snmp->set(                    // retorna un booleano o un null. FALSE en caso de que haya habido error, TRUE si no lo hubo y null si no pudo alcanzarlo
             ip: '10.16.208.47',             // IP del dispositivo (Requerido)
@@ -346,7 +346,7 @@
 
         <?php
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $r = $snmp->setByRef(               // retorna un booleano o un null. FALSE en caso de que haya habido error, TRUE si no lo hubo y null si no pudo alcanzarlo
             ip: '10.16.208.47',             // IP del dispositivo (Requerido)
@@ -395,7 +395,7 @@
 
         <?php
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $r = $snmp->iterateByRef(
             ip: '10.16.208.47',             // IP del dispositivo (Requerido)
@@ -470,7 +470,7 @@
 
         <?php
 
-        $snmp = new d4m111\SnmpManager\App\Services\SnmpService();
+        $snmp = new D4m111\SnmpManager\App\Services\SnmpService();
 
         $r = $snmp->getOidRefListsByDevice(
             oidRefsList: ['traffic_in'],    // Lista de referancias a OIDs dentro de archivos de config (Opcional - default = vacio, osea recorre todas las referencias)
