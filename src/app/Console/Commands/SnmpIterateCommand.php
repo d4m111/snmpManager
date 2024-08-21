@@ -4,7 +4,7 @@ namespace D4m111\SnmpManager\App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-use Telecentro\SnmpManager\App\Services\SnmpService;
+use D4m111\SnmpManager\App\Services\SnmpService;
 
 use \Exception;
 

@@ -2,7 +2,7 @@
 
 namespace D4m111\SnmpManager\App\Providers;
 
-use Telecentro\SnmpManager\App\Console\Commands;
+use D4m111\SnmpManager\App\Console\Commands;
 
 use Illuminate\Support\ServiceProvider;
 

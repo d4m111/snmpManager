@@ -2,9 +2,9 @@
 
 namespace D4m111\SnmpManager\App\Entities;
 
-use Telecentro\SnmpManager\App\Adapters\SnmpAdapterInterface;
-use Telecentro\SnmpManager\App\Entities\LogEntity;
-use Telecentro\SnmpManager\App\Entities\RefFileEntity;
+use D4m111\SnmpManager\App\Adapters\SnmpAdapterInterface;
+use D4m111\SnmpManager\App\Entities\LogEntity;
+use D4m111\SnmpManager\App\Entities\RefFileEntity;
 
 use \Exception;
 

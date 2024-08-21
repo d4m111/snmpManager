@@ -1,6 +1,6 @@
 <?php
 
-namespace Telecentro\SnmpManager\App\Utils;
+namespace D4m111\SnmpManager\App\Utils;
 
 use Carbon\Carbon;
 use Illuminate\Log\Logger;
