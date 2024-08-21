@@ -1,5 +1,5 @@
 {
-    "name": "dam111/snmp-manager",
+    "name": "d4m111/snmp-manager",
     "description": "Paquete instalable para manejar la comunicación con distintos dispositivos a través de SNMP",
     "type": "library",
     "license": "MIT",
