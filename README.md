@@ -17,7 +17,9 @@
         sudo apt-get install php8.1-yaml
         sudo apt-get install php8.1-snmp
 
-- Edite el archivo `composer.json` y añada al listado la referencia al paquete:
+- Edite el archivo `composer.json` y añada la referencia al paquete:
+        
+        ...
 
         "repositories": [
             {
