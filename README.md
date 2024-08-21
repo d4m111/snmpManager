@@ -17,12 +17,12 @@
         sudo apt-get install php8.1-yaml
         sudo apt-get install php8.1-snmp
 
-- Edite el archivo `composer.json` y añada el siguiente bloque:
+- Edite el archivo `composer.json` y añada al listado la referencia al paquete:
 
         "repositories": [
             {
-            "type": "vcs",
-            "url": "https://github.com/d4m111/snmpManager.git"
+                "type": "vcs",
+                "url": "https://github.com/d4m111/snmpManager.git"
             }
         ]
 
