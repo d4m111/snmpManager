@@ -4,6 +4,8 @@ namespace D4m111\SnmpManager\App\Entities;
 
 use Illuminate\Support\Facades\Log;
 
+use \Exception;
+
 class LogEntity {
     
     private $channel = '';
@@ -46,23 +48,33 @@ class LogEntity {
     public function log(string $type, array $params): void
     {
 
+        $message = '';
+        $context = [];
+
         if(!$this->channel){
             return;
         }
 
-        $params = $this->porcess($params);
+        $params = $this->porcess($params); 
 
-        $message = match(strtoupper($this->messageFormat)) {
-            'LOKI'      => $this->lokiFormat($params),
-            'JSON'      => $this->jsonFormat($params),
-            default     => $this->lokiFormat($params),
-        };
+        if(strtoupper($this->messageFormat) == 'LOKI'){
+            
+            $message = $this->lokiFormat($params);
+
+        }else if(strtoupper($this->messageFormat) == 'JSON'){
+
+            $context = $this->jsonFormat($params);
+
+        }else{
+
+            throw new Exception("Log format not found");
+        }
                 
         match(strtoupper($type)) {
             // mando el mensaje en el context para que el log menje automaticamente el formato json
-            'INFO'      => optional(Log::channel($this->channel))->info('',$message),
-            'ERROR'     => optional(Log::channel($this->channel))->error('',$message),
-            'DEBUG'     => optional(Log::channel($this->channel))->debug('',$message),
+            'INFO'      => optional(Log::channel($this->channel))->info($message,$context),
+            'ERROR'     => optional(Log::channel($this->channel))->error($message,$context),
+            'DEBUG'     => optional(Log::channel($this->channel))->debug($message,$context),
         };
     }
 
